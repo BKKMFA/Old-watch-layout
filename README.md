@@ -17,9 +17,6 @@ The popup has three switches; reload the YouTube tab after changing one.
 Pick your browser. After installing, **reload your YouTube tab** (Ctrl+Shift+R), click the extension's
 icon, and check the three switches. "Always theater mode" is worth turning on if you want a bigger player.
 
-> Until the extension is listed in a browser's add-on store, you install it manually from a downloaded
-> zip. That is safe if you trust the source, and you can read every line of code in this repo.
-
 ### Microsoft Edge
 1. Go to the [Releases](../../releases) page and download `classic-watch-layout-...-chromium.zip`.
 2. **Unzip it into a folder you will keep**, for example `Documents\ClassicWatchLayout`. Do not delete or
