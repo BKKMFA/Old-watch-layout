@@ -1,0 +1,29 @@
+/* ---------- Premium upsells ---------- */
+html[data-ytc-hidePremium] ytd-guide-entry-renderer:has(a[title="YouTube Premium"]),
+html[data-ytc-hidePremium] ytd-guide-entry-renderer:has(a[href*="/premium"]),
+html[data-ytc-hidePremium] ytd-topbar-menu-button-renderer:has(a[href*="/premium"]),
+html[data-ytc-hidePremium] ytd-statement-banner-renderer,
+html[data-ytc-hidePremium] ytd-mealbar-promo-renderer {
+  display: none !important;
+}
+
+/* ---------- Classic watch page: remove leftover side-rail strip and gap ---------- */
+html[data-ytc-classicWatch] .ytSideRailViewModelHost { display: none !important; }
+html[data-ytc-classicWatch] ytd-watch-flexy { --ytd-watch-flexy-fixed-side-menu-width: 0px !important; }
+html[data-ytc-classicWatch] ytd-watch-flexy #columns::after { width: 0 !important; display: none !important; }
+
+/* ---------- Classic watch page: normal-width recommendations column (lets the player grow) ---------- */
+html[data-ytc-classicWatch] ytd-watch-flexy {
+  --ytd-watch-flexy-sidebar-width: 402px !important;
+  --ytd-watch-flexy-sidebar-min-width: 402px !important;
+}
+html[data-ytc-classicWatch] ytd-watch-flexy #secondary.ytd-watch-flexy {
+  width: 402px !important;
+  min-width: 402px !important;
+  max-width: 402px !important;
+}
+
+/* ---------- Taller default-view player (matches the metadata-height override) ---------- */
+html[data-ytc-classicWatch] ytd-watch-flexy {
+  --ytd-watch-flexy-max-player-width: calc((100vh - 56px - 12px - 100px) * (16 / 9)) !important;
+}

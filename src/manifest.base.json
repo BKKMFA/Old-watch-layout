@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Classic Watch Layout for YouTube",
+  "version": "1.0.0",
+  "description": "Restores the classic YouTube watch page: comments below the video, recommendations on the right, and theater mode.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Classic Watch Layout for YouTube",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+  },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["watch-layout.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
