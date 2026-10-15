@@ -5,7 +5,6 @@ after the October 2026 layout test:
 
 - Comments and description go back **under the video**
 - Recommendations go back to the **right-hand column**, at normal size
-- The Description / Comments / Ask side strip is removed
 - Optional: **always open videos in theater mode**
 - Optional: hide Premium upsells
 
